@@ -1,1 +1,1 @@
-##
+For Installation : https://www.tutorialspoint.com/sqoop/sqoop_installation.htm
