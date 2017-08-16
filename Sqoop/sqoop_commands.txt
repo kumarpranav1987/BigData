@@ -1,1 +1,21 @@
-For Installation : https://www.tutorialspoint.com/sqoop/sqoop_installation.htm
+########## OS Linux Mint on VMWare Player ######################################
+
+########### Sqoop Installation ################################
+Sqoop is used for 
+  ->Import Data from Relational Database to HDFS
+  ->Export Data from HDFS to Relational DataBase
+For Sqoop Installation : https://www.tutorialspoint.com/sqoop/sqoop_installation.htm
+
+################### Prepare RDBMS ################################
+Going To Use Mysql as RDBMS
+Going To use Movie rating data from https://grouplens.org/datasets/movielens/ for demo.
+
+#####################       Sqoop Commands        ################################
+Verify Sqoop : sqoop version
+1)List all databases  
+sqoop list-databases --connect "jdbc:mysql://localhost" --username root --password password 
+2)List all tables of a DB 
+sqoop list-tables --connect "jdbc:mysql://localhost/userdb" --username root --password password 
+3) Run a select query  
+sqoop eval --connect "jdbc:mysql://localhost/userdb" --username root --password password --query "select * from emp_add" 
+4)sqoop import –help
