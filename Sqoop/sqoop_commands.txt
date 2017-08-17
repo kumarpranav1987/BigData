@@ -9,13 +9,18 @@ For Sqoop Installation : https://www.tutorialspoint.com/sqoop/sqoop_installation
 ################### Prepare RDBMS ################################
 Going To Use Mysql as RDBMS
 Going To use Movie rating data from https://grouplens.org/datasets/movielens/ for demo.
-
+create database movie_rating;
+use movie_rating;
+create table movies(movieId int , title varchar(100), genres varchar(1000));
+load data local infile '/home/ion/BigData/ml-latest-small/movies.csv' into table movies fields terminated by ',' lines terminated by '\r\n';
 #####################       Sqoop Commands        ################################
 Verify Sqoop : sqoop version
 1)List all databases  
 sqoop list-databases --connect "jdbc:mysql://localhost" --username root --password password 
 2)List all tables of a DB 
-sqoop list-tables --connect "jdbc:mysql://localhost/userdb" --username root --password password 
+sqoop list-tables --connect "jdbc:mysql://localhost/movie_rating" --username root --password password 
 3) Run a select query  
-sqoop eval --connect "jdbc:mysql://localhost/userdb" --username root --password password --query "select * from emp_add" 
+sqoop eval --connect "jdbc:mysql://localhost/movie_rating" --username root --password password --query "select * from movies" 
 4)sqoop import –help
+5)Specify field terminated deliminator
+sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fields-terminated-by '#' --username root --password password -m 1
