@@ -1,4 +1,4 @@
-package mapreduce.example;
+package mapreduce.example.wordcount;
 
 import java.io.IOException;
 

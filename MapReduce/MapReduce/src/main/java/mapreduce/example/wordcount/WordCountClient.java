@@ -1,4 +1,4 @@
-package mapreduce.example;
+package mapreduce.example.wordcount;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -11,7 +11,6 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 public class WordCountClient {
-
 	public static void main(String[] args) throws Exception {
 		Job job = Job.getInstance(new Configuration());
 		job.setJarByClass(WordCountClient.class);
@@ -30,5 +29,4 @@ public class WordCountClient {
 			System.exit(1);
 		}
 	}
-
 }
