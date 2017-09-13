@@ -1,3 +1,6 @@
 #####################     Spark Blogs      ##########################
 1)Spark Job Execution Explained
     https://blog.cloudera.com/blog/2015/03/how-to-tune-your-apache-spark-jobs-part-1/
+2)Spark Application Scheduling on Yarn 
+    http://blog.cloudera.com/blog/2014/05/apache-spark-resource-management-and-yarn-app-models/
+
