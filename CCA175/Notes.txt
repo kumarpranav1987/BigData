@@ -1,3 +1,9 @@
-######HDFS######
+######        HDFS      ######
 Important properties in hdfs-site.xml
 	Block Size - dfs.blocksize
+
+Commands
+1) copyFromLocal to dfs
+hadoop fs -copyFromLocal <Path of file from Local Host> <Path on HDFS>
+
+2)
