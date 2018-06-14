@@ -15,6 +15,13 @@ create table movies(movieId int , title varchar(100), genres varchar(1000));
 load data local infile '/home/ion/BigData/ml-latest-small/movies.csv' into table movies fields terminated by ',' lines terminated by '\r\n';
 #####################       Sqoop Commands        ################################
 Verify Sqoop : sqoop version
+
+For Help : sqoop help (It will list all commands)
+
+For help related to a particulat command :           
+          sqoop <Command> --help
+           Example : sqoop list-databases --help
+           
 1)List all databases  
 sqoop list-databases --connect "jdbc:mysql://localhost" --username root --password password 
 2)List all tables of a DB 
