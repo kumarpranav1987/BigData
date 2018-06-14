@@ -13,6 +13,16 @@ create database movie_rating;
 use movie_rating;
 create table movies(movieId int , title varchar(100), genres varchar(1000));
 load data local infile '/home/ion/BigData/ml-latest-small/movies.csv' into table movies fields terminated by ',' lines terminated by '\r\n';
+
+******************* OR ***********
+0)Download retail_db.sql from current github repo and cd to downloaded directory
+1)Go to mysql prompt using:$ mysql -u root -p password
+mysql > create database retail_db;
+mysql > user retail_db;
+mysql > source retail_db.sql;
+
+
+
 #####################       Sqoop Commands        ################################
 Verify Sqoop : sqoop version
 
