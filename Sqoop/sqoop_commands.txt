@@ -44,4 +44,8 @@ sqoop eval --connect "jdbc:mysql://localhost/movie_rating" --username root --pas
 
 5)sqoop import –help
 6)Specify field terminated deliminator(Default deliminator is , )
-sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fields-terminated-by '#' --username root --password password -m 1
+sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fields-terminated-by '#' --username root --password password
+
+7)Specify number of mappers , dafult is 4
+sqoop import --connect "jdbc:mysql://localhost/retail_db" --username root --password password --table order_items --target-dir /retail_db/order_items --num-mappers 1
+
