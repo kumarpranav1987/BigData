@@ -38,6 +38,10 @@ sqoop list-databases --connect "jdbc:mysql://localhost" --username root --passwo
 sqoop list-tables --connect "jdbc:mysql://localhost/movie_rating" --username root --password password 
 3) Run a select query  
 sqoop eval --connect "jdbc:mysql://localhost/movie_rating" --username root --password password --query "select * from movies" 
-4)sqoop import –help
-5)Specify field terminated deliminator
+4)DDL Command using sqoop
+    sqoop eval --connect "jdbc:mysql://localhost/retail_db" --username root --password password "CREATE TABLE Test(i int)"
+
+
+5)sqoop import –help
+6)Specify field terminated deliminator(Default deliminator is , )
 sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fields-terminated-by '#' --username root --password password -m 1
