@@ -42,6 +42,9 @@ sqoop eval --connect "jdbc:mysql://localhost/movie_rating" --username root --pas
     sqoop eval --connect "jdbc:mysql://localhost/retail_db" --username root --password password "CREATE TABLE Test(i int)"
 
 
+Get The Schema of a table 
+  sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "describe orders"
+
 5)sqoop import –help
 6)Specify field terminated deliminator(Default deliminator is , )
 sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fields-terminated-by '#' --username root --password password
