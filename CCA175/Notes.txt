@@ -1,3 +1,9 @@
+Exam Experiences
+https://www.linkedin.com/pulse/why-what-how-cca-spark-hadoop-developer-exam-cca175-bombatkar
+
+
+
+
 ######        HDFS      ######
 Important properties in hdfs-site.xml
 	Block Size - dfs.blocksize
