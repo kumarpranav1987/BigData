@@ -64,4 +64,6 @@ When we use --query sqoop will not know directory to create if we use --warehous
 
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --target-dir /retail_db --query "select o.*,sum(oi.order_item_subtotal) orere_revenue from orders o join order_items oi on o.order_id = oi.order_item_id and \$CONDITIONS group by  o.order_id,o.order_date,o.order_customer_id,o.order_status" --split-by order_id
 
-
+Handling null values in databases
+--null-string <value>
+--null-non-string <value>
