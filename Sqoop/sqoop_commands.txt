@@ -52,3 +52,6 @@ sqoop import --connect "jdbc:mysql://localhost/movie_rating" --table movies --fi
 7)Specify number of mappers , dafult is 4
 sqoop import --connect "jdbc:mysql://localhost/retail_db" --username root --password password --table order_items --target-dir /retail_db/order_items --num-mappers 1
 
+import specific columns using sqoop
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders --column order_id --target-dir /retail_db
+
