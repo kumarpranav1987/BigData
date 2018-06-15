@@ -55,3 +55,13 @@ sqoop import --connect "jdbc:mysql://localhost/retail_db" --username root --pass
 import specific columns using sqoop
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders --column order_id --target-dir /retail_db
 
+table and/or columns is mutually exclusive with --query
+it means we can't user both in same command 
+example this is wrong --table <table name> --query <any query>
+                      --table <table name> --column <column name> --query <any query>
+
+When we use --query sqoop will not know directory to create if we use --warehouse-dir , so we should use --target-dir to specify hdfs directory in import command.Also specify --split-by as it will not know primary key 
+
+
+
+
