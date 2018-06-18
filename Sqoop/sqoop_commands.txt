@@ -69,4 +69,4 @@ Handling null values in databases
 --null-non-string <value>
 
 Import All Tables
-
+sqoop import-all-tables --connect jdbc:mysql://localhost/retail_db --username root --password password --warehouse-dir /retail_db --autoreset-to-one-mapper
