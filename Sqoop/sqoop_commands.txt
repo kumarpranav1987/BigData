@@ -67,3 +67,6 @@ sqoop import --connect jdbc:mysql://localhost/retail_db --username root --passwo
 Handling null values in databases
 --null-string <value>
 --null-non-string <value>
+
+Import All Tables
+
