@@ -1,0 +1,2 @@
+Hive default functions
+Related to date 
