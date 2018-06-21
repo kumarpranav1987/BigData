@@ -1,2 +1,13 @@
 Hive default functions
 Related to date 
+
+hive> select current_date;
+2018-06-21
+hive> select current_timestamp;
+2018-06-21 11:26:33.255
+hive> select date_format(current_date,'y');
+2018
+hive> select date_format(current_date,'d');
+21
+hive> select date_format(current_date,'M');
+6
