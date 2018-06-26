@@ -13,3 +13,4 @@ Commands
 hadoop fs -copyFromLocal <Path of file from Local Host> <Path on HDFS>
 
 2)To Create only One File use coalesce
+3)To convert a Scala collection to RDD use sc.parallelize
