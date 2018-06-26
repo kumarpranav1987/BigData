@@ -14,3 +14,5 @@
 https://github.com/rohgar/scala-spark-4/wiki
 6)For Hadoop Internals
 http://ercoppa.github.io/HadoopInternals/
+7)YARN
+http://blog.cloudera.com/blog/2014/05/apache-spark-resource-management-and-yarn-app-models/
