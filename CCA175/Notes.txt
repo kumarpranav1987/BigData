@@ -12,4 +12,4 @@ Commands
 1) copyFromLocal to dfs
 hadoop fs -copyFromLocal <Path of file from Local Host> <Path on HDFS>
 
-2)
+2)To Create only One File use coalesce
