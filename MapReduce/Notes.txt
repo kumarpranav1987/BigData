@@ -1,0 +1,2 @@
+# Understanding Map and Reduce Phase in details
+http://www.bigsynapse.com/mapreduce-internals
