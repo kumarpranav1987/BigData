@@ -22,6 +22,15 @@ INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`order_item_id`),
 INFO db.IntegerSplitter: Split size: 43049; Num splits: 4 from: 1 to: 172198
 INFO mapreduce.JobSubmitter: number of splits:4
 
+If the table does not have any primary key then import will fail(if number of mapper is not 1)because it does not know how to
+partion the tasks between mappers.In this scenario we can specify a column for spliting the data using the control argument 
+--split-by <column name>
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table Test --target-dir /Test --split-by age  
+
+
+Points to remember while choosing the split by column  
+--It should be indexed other wise query time will be very large  
+--It should be Sequence Genrated or Evenly Generated
 
 
 1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
