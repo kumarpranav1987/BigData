@@ -10,7 +10,7 @@ sqoop list-databases --connect jdbc:mysql://localhost --username root --password
 ### List all Tables of a DB  
 sqoop list-tables --connect jdbc:mysql://localhost/retail_db  --username root --password password  
 
-### Run a select query  
+### Run a select query(Actually sqoop eval can be used to execute any sql query)
 sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "select * from orders"  
   
 ### DDL Command Using Sqoop  
