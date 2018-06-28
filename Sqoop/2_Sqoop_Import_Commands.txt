@@ -38,6 +38,8 @@ By Default spliting by non numeric field is not allowed but it can be overriden 
 
 sqoop import -Dorg.apache.sqoop.splitter.allow_text_splitter=true --connect jdbc:mysql://localhost/retail_db --username root --password password --table Test --split-by name --target-dir /Test
 
+###
+--autoreset-to-one-mapper 	Import should use one mapper if a table has no primary key and no split-by column is provided. Cannot be used with --split-by <col> option.
 
 1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
 We can also pass the target HDFS path using --warehouse-dir, in this case a subdirectory with the name of table is created in the passed directory and data is copied inside that.  
@@ -53,5 +55,12 @@ if we want to append in the taget directory we can use --append
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items  --target-dir \  
 /retail_db --delete-target-dir 
 3)Default field deliminator is comma ,
+
+4)File Format
+Default File format is text file , we can also specify it using --as-textfile
+Other File formats
+--as-avrodatafile
+--as-sequencefile
+--as-parquetfile
 
 
