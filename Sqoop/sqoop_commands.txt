@@ -31,19 +31,6 @@ For Help : sqoop help (It will list all commands)
 For help related to a particulat command :           
           sqoop <Command> --help
            Example : sqoop list-databases --help
-           
-1)List all databases  
-sqoop list-databases --connect "jdbc:mysql://localhost" --username root --password password 
-2)List all tables of a DB 
-sqoop list-tables --connect "jdbc:mysql://localhost/movie_rating" --username root --password password 
-3) Run a select query  
-sqoop eval --connect "jdbc:mysql://localhost/movie_rating" --username root --password password --query "select * from movies" 
-4)DDL Command using sqoop
-    sqoop eval --connect "jdbc:mysql://localhost/retail_db" --username root --password password "CREATE TABLE Test(i int)"
-
-
-Get The Schema of a table 
-  sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "describe orders"
 
 5)sqoop import –help
 6)Specify field terminated deliminator(Default deliminator is , )
