@@ -4,3 +4,18 @@ Connection Details for DB
 Username - root  
 Password - password  
 JDBC Connection String - jdbc:mysql://localhost  
+### List All Databases  
+sqoop list-databases --connect jdbc:mysql://localhost --username root --password password  
+
+### List all Tables of a DB  
+sqoop list-tables --connect jdbc:mysql://localhost/retail_db  --username root --password password  
+
+### Run a select query  
+sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "select * from orders"  
+  
+### DDL Command Using Sqoop  
+sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "CREATE TABLE Test(age int)"  
+
+### Get The Schema of a table  
+sqoop eval --connect jdbc:mysql://localhost/retail_db --username root --password password --query "describe orders"
+
