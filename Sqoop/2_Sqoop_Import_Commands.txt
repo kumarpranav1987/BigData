@@ -77,3 +77,7 @@ sqoop import --connect jdbc:mysql://localhost/retail_db --username root --passwo
 We can even hard code the valuses in boundary query
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --target-dir /retail_db --boundary-query 'select 99999,172198'
 
+### Importing specific columns and filtering data 
+--table <table name> --columns <col,col,col....>
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --columns order_item_id,order_item_subtotal --target-dir /retail_db 
+
