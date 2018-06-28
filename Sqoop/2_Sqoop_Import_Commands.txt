@@ -59,6 +59,13 @@ We can customarize this using
 --fields-terminated-by <char> 	Sets the field separator character
 --lines-terminated-by <char> 	Sets the end-of-line character 
 
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders --target-dir /retail_db --fields-terminated-by "\t" --lines-terminated-by ":"
+
+
+Handling null values
+--null-string <null-string> 	The string to be written for a null value for string columns
+--null-non-string <null-string> 	The string to be written for a null value for non-string columns 
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders --target-dir /retail_db --null-non-string "-1" --null-string ";"
 
 4)File Format
 Default File format is text file , we can also specify it using --as-textfile
