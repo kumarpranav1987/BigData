@@ -55,6 +55,10 @@ if we want to append in the taget directory we can use --append
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items  --target-dir \  
 /retail_db --delete-target-dir 
 3)Default field deliminator is comma ,
+We can customarize this using
+--fields-terminated-by <char> 	Sets the field separator character
+--lines-terminated-by <char> 	Sets the end-of-line character 
+
 
 4)File Format
 Default File format is text file , we can also specify it using --as-textfile
