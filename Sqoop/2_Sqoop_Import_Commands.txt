@@ -33,6 +33,11 @@ Points to remember while choosing the split by column
 --It should be Sequence Genrated or Evenly Generated
 --It should not have null values otherwise those rows will be ignored
 
+By Default spliting by non numeric field is not allowed but it can be overriden by passing following VM argument
+-Dorg.apache.sqoop.splitter.allow_text_splitter=true
+
+sqoop import -Dorg.apache.sqoop.splitter.allow_text_splitter=true --connect jdbc:mysql://localhost/retail_db --username root --password password --table Test --split-by name --target-dir /Test
+
 
 1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
 We can also pass the target HDFS path using --warehouse-dir, in this case a subdirectory with the name of table is created in the passed directory and data is copied inside that.  
