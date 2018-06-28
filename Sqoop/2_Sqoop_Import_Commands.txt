@@ -1,0 +1,2 @@
+Sqoop Import is used to import data from RDBMS to HDFS  
+
