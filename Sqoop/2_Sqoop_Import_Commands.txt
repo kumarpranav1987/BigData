@@ -62,5 +62,12 @@ Other File formats
 --as-avrodatafile
 --as-sequencefile
 --as-parquetfile
+5)Compressing the imported data
+--compress 	Enable compression (Defaut Compression id gzip)
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --target-dir /retail_db --compress
+
+
+To specify compression codec (Supported codecs can be checked from $HADOOP_HOME/etc/hadoop/core-site.xml property name is io.compression.codec)
+--compression-codec <c> 	Use Hadoop codec (default gzip)
 
 
