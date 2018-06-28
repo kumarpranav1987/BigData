@@ -9,6 +9,8 @@ To generate the code for map reduce sqoop needs the schema of the table so it fi
 in our case 
 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `order_items` AS t LIMIT 1  
 Using this schema the required MapReduce code is generated compiled and bundeled into a jar for execution
+By default Sqoop uses 4 mappers for import, can be changed using --num-mappers  
+
 
 
 1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
