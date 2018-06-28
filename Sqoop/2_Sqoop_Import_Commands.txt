@@ -2,7 +2,17 @@ Sqoop Import is used to import data from RDBMS to HDFS
 
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --target-dir /retail_db  
 
-Observations  
+Observations (Look in the logs)
+Sqoop Import Execution Life Cycle  
+Sqoop import is excuted as a MapReduce job.  
+To generate the code for map reduce sqoop needs the schema of the table so it fires a select quuery  
+in our case 
+INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM `order_items` AS t LIMIT 1
+  
+    
+From using this schema the required MapReduce code is generated compiled and bundeled into a jar for execution
+
+
 1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
 We can also pass the target HDFS path using --warehouse-dir, in this case a subdirectory with the name of table is created in the passed directory and data is copied inside that.  
 
