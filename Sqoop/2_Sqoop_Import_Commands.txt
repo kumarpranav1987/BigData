@@ -13,9 +13,9 @@ By default Sqoop uses 4 mappers for import, can be changed using --num-mappers
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --num-mappers 1 --target-dir /retail_db
 
 As the defaut number of mapper is 4 so four output files will be generated in the specified target directory.
-Whole data is divided into 4 mutualy exclusive parts and each mapper work on one part.
+Whole data is divided into 4 mutualy exclusive parts using the primary key and each mapper work on one part.
 For eaxmple if there are 100 rows in table then each mapper will work on 25 rows.
-This division is done using below query  
+This division is done using below query  (In this case primary key is order_item_id)
 
 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`order_item_id`), MAX(`order_item_id`) FROM `order_items`
 INFO db.IntegerSplitter: Split size: 43049; Num splits: 4 from: 1 to: 172198
