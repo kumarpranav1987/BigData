@@ -1,2 +1,16 @@
 Sqoop Import is used to import data from RDBMS to HDFS  
 
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --target-dir /retail_db  
+
+Observations  
+1)Target HDFS path has been specified using --target-dir so the data is imported in this directory  
+We can also pass the target HDFS path using --warehouse-dir, in this case a subdirectory with the name of table is created in the passed directory and data is copied inside that.  
+
+
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table order_items --warehouse-dir /retail_db  
+
+2)Target HDFS directory should be empty otherwise import will fail.
+
+3)Default field deliminator is comma ,
+
+
