@@ -100,4 +100,10 @@ sqoop import --connect jdbc:mysql://localhost/retail_db --username root --passwo
 
 
 Incremental Import
+For incremental import we can use query to filter the required data
+Baseline Data(Day 1)
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --query "select * from orders where \$CONDITIONS and order_date like '2013-%'" --split-by order_id --target-dir /retail_db
+
+Now Load January 2014 Data
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --query "select * from orders where \$CONDITIONS and order_date like '2014-01-%'" --split-by order_id --target-dir /retail_db --append
 
