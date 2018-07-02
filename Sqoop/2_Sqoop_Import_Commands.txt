@@ -110,3 +110,7 @@ sqoop import --connect jdbc:mysql://localhost/retail_db --username root --passwo
 We can also use --where clause
 sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders --where "order_date like '2014-02-%'" --target-dir /retail_db --append
 
+Better Way to do incremental import
+sqoop import --connect jdbc:mysql://localhost/retail_db --username root --password password --table orders  --target-dir /retail_db --check-column order_date --incremental append --last-value '2014-02-28'
+
+
