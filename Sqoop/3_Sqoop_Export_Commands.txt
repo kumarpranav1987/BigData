@@ -1,0 +1,1 @@
+sqoop export --connect jdbc:mysql://localhost/retail_db_export --username root --password password --export-dir /retail_db/orders --table orders
