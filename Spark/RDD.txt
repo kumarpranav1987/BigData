@@ -1,0 +1,7 @@
+Creatting RDD from Scala Collection
+
+val list = (1 to 1000)
+val rdd = sc.parallelize(list)
+
+Another way
+val rdd1 = sc.makeRDD(list)
