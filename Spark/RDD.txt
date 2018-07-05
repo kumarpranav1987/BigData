@@ -14,4 +14,5 @@ orders.take(10).foreach(println)
 //Create a RDD from Local File System
 val localrdd = sc.textFile("file:///tmp/input.txt")
 
+//Reading other file formats like orc,json,parquet,avro
 
