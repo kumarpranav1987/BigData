@@ -12,6 +12,6 @@ val orders = sc.textFile("hdfs://localhost:9000/retail_db/orders")
 orders.take(10).foreach(println)
 
 //Create a RDD from Local File System
-val localrdd = sc.textFile("/tmp/input.txt")
+val localrdd = sc.textFile("file:///tmp/input.txt")
 
 
