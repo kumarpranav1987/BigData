@@ -21,3 +21,11 @@ jsondata.show()
 
 //Another way
 val data = sqlContext.load("hdfs://localhost:9000/data/retail_db/orders","json")
+
+//map Transformation
+// Data 1,2013-07-25 00:00:00.0,11599,CLOSED we want only date from this in format 20130725 
+val orders = sc.textFile("hdfs://localhost:9000/retail_db/orders")
+val dates = orders.map(order=>order.split(",")(1).substring(0,10).replace("-",""))
+dates.take(10).foreach(println)
+
+//flatMap transformation
