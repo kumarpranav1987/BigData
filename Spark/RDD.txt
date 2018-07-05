@@ -1,7 +1,14 @@
-Creatting RDD from Scala Collection
+//Creatting RDD from Scala Collection
 
 val list = (1 to 1000)
 val rdd = sc.parallelize(list)
 
-Another way
+//Another way
 val rdd1 = sc.makeRDD(list)
+
+//Loading a RDD textfile from HDFS
+val orders = sc.textFile("hdfs://localhost:9000/retail_db/orders")
+//To preview the data
+orders.take(10).foreach(println)
+
+
