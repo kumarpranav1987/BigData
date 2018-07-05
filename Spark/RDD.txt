@@ -15,4 +15,9 @@ orders.take(10).foreach(println)
 val localrdd = sc.textFile("file:///tmp/input.txt")
 
 //Reading other file formats like orc,json,parquet,avro
+//Below command return dataframe
+val jsondata = sqlContext.read.json("hdfs://localhost:9000/data/retail_db_json/orders")
+jsondata.show()
 
+//Another way
+val data = sqlContext.load("hdfs://localhost:9000/data/retail_db/orders","json")
